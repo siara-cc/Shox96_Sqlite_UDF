@@ -54,4 +54,4 @@ select length(b1) compressed_len from test;
 
 # Issues
 
-Please contact the author (Arundale Ramanathan) at arun@siara.cc if you find any problem (or create issue here).
+Please contact the author if you find any problem or create issue here.
