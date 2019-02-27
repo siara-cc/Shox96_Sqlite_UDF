@@ -8,7 +8,7 @@ Shox96 is a compression technique developed for reducing storage size of Short S
 
 As of now it can work on only strings made of 'A to Z', 'a to z', '0-9', Special Characters such as &*() etc. found on keyboard, CR, LF, TAB and Space.
 
-In general it can achieve upto 40% size reduction for Short Strings.
+In general it can achieve upto 60% size reduction for Short Strings.
 
 # This project
 
@@ -54,4 +54,4 @@ select txt, length(txt) txt_len, clen from (select shox96_0_2d(b1) txt, length(b
 
 # Issues
 
-Please contact the author if you find any problem or create issue here.
+Please contact the author (Arundale Ramanathan) at arun@siara.cc if you find any problem or create issue here.
