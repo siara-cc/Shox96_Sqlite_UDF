@@ -35,8 +35,9 @@ After successful compilation, run `sqlite3` from the same folder to open the Sql
 create table test (b1 blob);
 insert into test values (shox96_0_2c('Hello World'));
 insert into test values (shox96_0_2c('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'));
-select txt, length(txt) txt_len from (select shox96_0_2d(b1) txt from test);
-select length(b1) compressed_len from test;
+insert into test values (shox96_0_2c('Hello World Hello World Hello World Hello World '));
+insert into test values (shox96_0_2c('This line is tooooooooooooooooooooooooooooooooooooooooooooooooooo long'));
+select txt, length(txt), clen txt_len from (select shox96_0_2d(b1) txt, length(b1) clen from test);
 ```
 
 # Screenshots

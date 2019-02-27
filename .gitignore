@@ -3,4 +3,5 @@
 *.dylib*
 *.so
 .DS_Store
+.vscode
 
