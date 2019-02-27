@@ -40,7 +40,7 @@ insert into test values (shox96_0_2c('Hello World'));
 insert into test values (shox96_0_2c('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'));
 insert into test values (shox96_0_2c('Hello World Hello World Hello World Hello World '));
 insert into test values (shox96_0_2c('This line is tooooooooooooooooooooooooooooooooooooooooooooooooooo long'));
-select txt, length(txt), clen txt_len from (select shox96_0_2d(b1) txt, length(b1) clen from test);
+select txt, length(txt) txt_len, clen from (select shox96_0_2d(b1) txt, length(b1) clen from test);
 ```
 
 # Screenshots
