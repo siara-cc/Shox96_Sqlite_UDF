@@ -50,7 +50,6 @@ select txt, length(txt), clen txt_len from (select shox96_0_2d(b1) txt, length(b
 # Limitations
 
 - Trying to decompress any blob that was not compressed using `shox96_0_2c()` will crash the program.
-- Dictionary based compression / decompression is not yet implemented
 - This works well with short strings as shown above.  For longer strings, use [compress](https://www.sqlite.org/src/file/ext/misc/compress.c) loadable extension provided in Sqlite website.
 
 # Issues
