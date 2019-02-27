@@ -14,15 +14,18 @@ In general it can achieve upto 40% size reduction for Short Strings.
 
 This project exposes the compression and decompression functions of Shox96 in the form of Sqlite Loadable extension.
 
-The suffix of 0_2 indicates the version of the compression technique.  In case the compression algorithm is changed in future, this implementation will not be affected.  That means any text compressed with shox96_0_2c() can be uncompressed only by shox96_0_2d().
+The suffix of `0_2` indicates the version of the compression technique.  In case the compression algorithm is changed in future, this implementation will not be affected.  That means any text compressed with `shox96_0_2c()` can be uncompressed only by `shox96_0_2d()`.
 
 # Compiling
 
 To compile the loadable extension, use the following commands on `shox96_0_2.c` downloaded from this repository:
 
 Unix / Linux: `gcc -g -fPIC -shared shox96_0_2.c -o shox96_0_2.so`
+
 MacOS: `gcc -g -fPIC -dynamiclib shox96_0_2.c -o shox96_0_2.dylib`
+
 Windows MSVC: `cl shox96_0_2.c -link -dll -out:shox96_0_2.dll`
+
 Windows MinGW: gcc -g -shared shox96_0_2.c -o shox96_0_2.dll`
 
 # Usage
@@ -46,10 +49,10 @@ select txt, length(txt), clen txt_len from (select shox96_0_2d(b1) txt, length(b
 
 # Limitations
 
-- Trying to decompress any blob that was not compressed using shox96_0_2c() will crash the program.
+- Trying to decompress any blob that was not compressed using `shox96_0_2c()` will crash the program.
 - Dictionary based compression / decompression is not yet implemented
 - This works well with short strings as shown above.  For longer strings, use [compress](https://www.sqlite.org/src/file/ext/misc/compress.c) loadable extension provided in Sqlite website.
 
 # Issues
 
-Please contact the author (Arundale Ramanathan) at arun@siara.cc if you find any problem (or create issue here).
+Please contact the author if you find any problem or create issue here.
