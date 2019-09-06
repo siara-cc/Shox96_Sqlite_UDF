@@ -1,5 +1,7 @@
 # Compress / Decompress functions based on Shox96 for SQLite3
 
+## ** This library has been deprecated.  Please use [Shox96_Sqlite_UDF](https://github.com/siara-cc/Unishox_Sqlite_UDF) instead. It has same features and more.
+
 This Sqlite3 [loadable extension](https://www.sqlite.org/loadext.html) exposes two functions `shox96_0_2c()` and `shox96_0_2d()` to any Sqlite3 database for compressing and decompressing text data.
 
 # Preface
